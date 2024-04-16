@@ -1,0 +1,18 @@
+.navbody{
+	background-color: skyblue;
+	display: flex;
+	flex-direction: column;
+}
+
+.options{
+	display: flex;
+/*	background-color: green*/
+}
+
+
+.text1{
+	flex-direction: ;
+	display: flex;
+	direction: end;
+	padding:5px;
+}

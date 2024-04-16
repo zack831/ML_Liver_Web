@@ -1,0 +1,16 @@
+import "./navbar.css";
+import {Link} from "react-router-dom";
+
+function Nav(){
+	return(
+		<div className = "navbody">
+		<h1 className = "header">Mortality Predection and Classification</h1>
+		<div className = "options">
+			<h4 className = "text1"><Link to = "/home">Home</Link></h4>
+			<h4 className = "text1">Login</h4>
+			<h4 className = "text1">Sign Up</h4></div>
+		</div>
+	);
+}
+
+export default Nav;
