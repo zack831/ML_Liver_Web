@@ -1,10 +1,30 @@
 import "./homepage.css";
 import Nav from "../layouts/navbar.js"
-import { useState } from 'react';
+import React, { useEffect, useState } from "react";
+// import { useState } from 'react';
 
 function Homepage(){
 
 	const [inputs, setinputs] = useState({})
+	const [message, setmessage] = useState({});
+
+	const fetchmessage = async() => {
+		const requestOptions = {
+			method : "GET",
+			headers: {
+				"Content-Type": "application/json"
+			},
+		};
+
+		const response = await fetch("/home",requestOptions);
+		const data = response.json();
+
+		console.log(data);
+	};
+
+	useEffect(()=>{
+		fetchmessage();
+	},[]);
 
 	const handleChange = (event) => {
     	var name = event.target.name;
