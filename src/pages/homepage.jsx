@@ -4,7 +4,7 @@ import ResultsOutput from "../components/resultsOutput.jsx"
 
 function Homepage() {
 	const [showPredictionForm, setShowPredictionForm] = useState(true);
-	 const [predictionResult, setPredictionResult] = useState(null);
+	const [predictionResult, setPredictionResult] = useState(null);
 
     const handleNext = (data) => {
         setShowPredictionForm(false);
