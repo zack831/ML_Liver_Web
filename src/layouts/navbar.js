@@ -6,8 +6,7 @@ function Nav(){
 		<div className = "navbody">
 		<h1 className = "header">Mortality Predection and Classification</h1>
 		<div className = "options">
-			<h4 className = "text"><Link to = "/home">Home</Link></h4>
-			<h4 className = "text">Login</h4>
+			<h4 className = "text"><Link to = "/Homepage">Home</Link></h4>
 			<h4 className = "text">Sign Up</h4></div>
 		</div>
 	);

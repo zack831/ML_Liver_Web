@@ -1,0 +1,39 @@
+.feature_body {
+    background-color: lightyellow;
+}
+
+.feature_inputs {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Add overflow-y property to enable vertical scrollbar */
+    max-height: 500px; 
+}
+
+.feature_inputs label {
+    margin-bottom: 5px;
+}
+
+.feature_inputs input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.feature_inputs button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.feature_inputs button:hover {
+    background-color: #0056b3;
+}

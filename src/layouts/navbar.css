@@ -2,10 +2,12 @@
 	background-color: skyblue;
 	display: flex;
 	flex-direction: column;
+	margin-bottom:10px;
 }
 
 .options{
 	display: flex;
+	width :auto;
 /*	background-color: green*/
 }
 
@@ -14,7 +16,7 @@
 }
 
 .text{
-	flex-direction: ;
+	flex-direction: row-reverse;
 	display: flex;
 	direction: end;
 	padding:5px;
