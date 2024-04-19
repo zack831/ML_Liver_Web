@@ -1,232 +1,215 @@
 import "./homepage.css";
 import Nav from "../layouts/navbar.js"
 import React, { useEffect, useState } from "react";
-// import { useState } from 'react';
 
 function Homepage(){
 
-	const [inputs, setinputs] = useState({})
-	const [message, setmessage] = useState({});
-
-	const fetchmessage = async() => {
-		const requestOptions = {
-			method : "GET",
-			headers: {
-				"Content-Type": "application/json"
-			},
-		};
-
-		const response = await fetch("/home",requestOptions);
-		const data = response.json();
-
-		console.log(data);
-	};
-
-	useEffect(()=>{
-		fetchmessage();
-	},[]);
+	const [inputs, setinputs] = useState({});
+	const [data, setdata] = useState([{}]);
 
 	const handleChange = (event) => {
-    	var name = event.target.name;
-    	var value = event.target.value;
-    	setinputs(values => ({...values,[name]:value}))  
-  	}
+		var name = event.target.name;
+    var value = event.target.value;
+    setinputs(values => ({...values,[name]:value}))  
+  };
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputs)
-}
+    console.log(inputs);
+  };
+
+
 	return(
 		<div className = "body">
 			<h1>Input data for predection</h1>
-			<form className='login_form' onSubmit={handleSubmit}>
+			<div className = "box">
+				<form className='login_form' onSubmit={handleSubmit}>
 
-		        <div>
-		          <label for = "age">Age</label>
-		          <input type = "text"  
-		          name = "age" 
-		          placeholder = "int" 
-		          value ={inputs.age || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features1">
+			          <label for = "AGE">Age</label>
+			          <input type = "text"  
+			          name = "AGE" 
+			          placeholder = "int" 
+			          value ={inputs.AGE || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "gender">Gender</label>
-		          <input type = "text" 
-		          name = "gender" 
-		          placeholder = "int" 
-		          value ={inputs.gender || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features2">
+			          <label for = "GENDER">Gender</label>
+			          <input type = "text" 
+			          name = "GENDER" 
+			          placeholder = "int" 
+			          value ={inputs.GENDER || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "albumin">Albumin</label>
-		          <input type = "text" 
-		          name = "albumin" 
-		          placeholder = "int" 
-		          value ={inputs.albumin || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features3">
+			          <label for = "ALBUMIN">Albumin</label>
+			          <input type = "text" 
+			          name = "ALBUMIN" 
+			          placeholder = "Float" 
+			          value ={inputs.ALBUMIN || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "bilirubin">Bilirubin</label>
-		          <input type = "text"
-		          name = "bilirubin" 
-		          placeholder = "int" 
-		          value ={inputs.bilirubin || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features4">
+			          <label for = "BILIRUBIN">Bilirubin</label>
+			          <input type = "text"
+			          name = "BILIRUBIN" 
+			          placeholder = "Float" 
+			          value ={inputs.BILIRUBIN || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "alk_phosphate">Alkaline Phosphate</label>
-		          <input type = "text" 
-		          name = "alk_phosphate" 
-		          placeholder = "int" 
-		          value ={inputs.alk_phosphate || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features5">
+			          <label for = "ALK_PHOSPHATE">Alkaline Phosphate</label>
+			          <input type = "text" 
+			          name = "ALK_PHOSPHATE" 
+			          placeholder = "Float" 
+			          value ={inputs.ALK_PHOSPHATE || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "sgot">SGOT</label>
-		          <input type = "text" 
-		          name = "sgot" 
-		          placeholder = "int" 
-		          value ={inputs.sgot || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features6">
+			          <label for = "SGOT">SGOT</label>
+			          <input type = "text" 
+			          name = "SGOT" 
+			          placeholder = "Float" 
+			          value ={inputs.SGOT || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "ascites">Ascites</label>
-		          <input type = "text" 
-		          name = "ascites" 
-		          placeholder = "ascites" 
-		          value ={inputs.ascites || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features7">
+			          <label for = "ASCITES">Ascites</label>
+			          <input type = "text" 
+			          name = "ASCITES" 
+			          placeholder = "int" 
+			          value ={inputs.ASCITES || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "spiders">Spiders</label>
-		          <input type = "text" 
-		          name = "spiders" 
-		          placeholder = "int" 
-		          value ={inputs.spiders || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features8">
+			          <label for = "SPIDERS">Spiders</label>
+			          <input type = "text" 
+			          name = "SPIDERS" 
+			          placeholder = "Float" 
+			          value ={inputs.SPIDERS || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "prothrombin">Prothrombin</label>
-		          <input type = "text" 
-		          name = "prothrombin" 
-		          placeholder = "int" 
-		          value ={inputs.prothrombin || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features9">
+			          <label for = "PROTHROMBIN">Prothrombin</label>
+			          <input type = "text" 
+			          name = "PROTHROMBIN" 
+			          placeholder = "Float" 
+			          value ={inputs.PROTHROMBIN || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "hepatomegaly">Hepatomegaly</label>
-		          <input type = "text" 
-		          name = "hepatomegaly" 
-		          placeholder = "int" 
-		          value ={inputs.hepatomegaly || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features10">
+			          <label for = "HEPATOMEGALY">Hepatomegaly</label>
+			          <input type = "text" 
+			          name = "HEPATOMEGALY" 
+			          placeholder = "Float" 
+			          value ={inputs.HEPATOMEGALY || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "platelets">Platelets</label>
-		          <input type = "text" 
-		          name = "platelets" 
-		          placeholder = "int" 
-		          value ={inputs.platelets || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features11">
+			          <label for = "PALTELETS">Platelets</label>
+			          <input type = "text" 
+			          name = "PALTELETS" 
+			          placeholder = "Float" 
+			          value ={inputs.PALTELETS || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "class">Class</label>
-		          <input type = "text" 
-		          name = "class" 
-		          placeholder = "int" 
-		          value ={inputs.class || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features12">
+			          <label for = "CLASS">Class</label>
+			          <input type = "text" 
+			          name = "CLASS" 
+			          placeholder = "Float" 
+			          value ={inputs.CLASS || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "alpha_fetoprotein">Alpha Fetoprotein</label>
-		          <input type = "text" 
-		          name = "alpha_fetoprotein" 
-		          placeholder = "int" 
-		          value ={inputs.alpha_fetoprotein || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features13">
+			          <label for = "ALPHA_FETOPROTEIN">Alpha Fetoprotein</label>
+			          <input type = "text" 
+			          name = "ALPHA_FETOPROTEIN" 
+			          placeholder = "Float" 
+			          value ={inputs.ALPHA_FETOPROTEIN || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "ferritin">Ferritin</label>
-		          <input type = "text" 
-		          name = "ferritin" 
-		          placeholder = "int" 
-		          value ={inputs.ferritin || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features14">
+			          <label for = "FERRITIN">Ferritin</label>
+			          <input type = "text" 
+			          name = "FERRITIN" 
+			          placeholder = "Float" 
+			          value ={inputs.FERRITIN || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "hemoglobin">Hemoglobin</label>
-		          <input type = "text" 
-		          name = "hemoglobin" 
-		          placeholder = "int" 
-		          value ={inputs.hemoglobin || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features15">
+			          <label for = "HEMOGLOBIN">Hemoglobin</label>
+			          <input type = "text" 
+			          name = "HEMOGLOBIN" 
+			          placeholder = "Float" 
+			          value ={inputs.HEMOGLOBIN || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-		         <div>
-		          <label for = "protien">Protien</label>
-		          <input type = "text" 
-		          name = "protien" 
-		          placeholder = "User Name" 
-		          value ={inputs.protien || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features16">
+			          <label for = "PROTINE">Protien</label>
+			          <input type = "text" 
+			          name = "PROTINE" 
+			          placeholder = "Float" 
+			          value ={inputs.PROTINE || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
-
-
-		        <div>
-		          <label for = "varices">Varices</label>
-		          <input type = "text"
-		          name = "varices"
-		          placeholder = "int"
-		          value = {inputs.varices || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
+			        <div className = "features17">
+			          <label for = "VARICES">Varices</label>
+			          <input type = "text"
+			          name = "VARICES"
+			          placeholder = "Float"
+			          value = {inputs.VARICES || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
 
 
-		         <div>
-		          <label for = "malaise">Malaise</label>
-		          <input type = "text" 
-		          name = "malaise" 
-		          placeholder = "float" 
-		          value ={inputs.malaise || ""}
-		          onChange={handleChange}
-		          ></input>
-		        </div>
-		      
-		        <input type = "submit" value = "Submit" className = "submit_login"></input>
+			        <div className = "features18">
+			          <label for = "MALAISE">Malaise</label>
+			          <input type = "text" 
+			          name = "MALAISE" 
+			          placeholder = "Float" 
+			          value ={inputs.MALAISE || ""}
+			          onChange={handleChange}
+			          ></input>
+			        </div>
+			      
+			        <input type = "submit" value = "Submit" className = "submit_login"></input>
 
-	      	</form>
+		      	</form>
+	      	</div>
 		</div>
 	);
 }

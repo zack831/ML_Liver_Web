@@ -9,8 +9,11 @@
 /*	background-color: green*/
 }
 
+.header{
+	text-align: center;
+}
 
-.text1{
+.text{
 	flex-direction: ;
 	display: flex;
 	direction: end;
