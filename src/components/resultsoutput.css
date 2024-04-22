@@ -1,0 +1,16 @@
+.results-section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f0f0f0; /* Background color of the box */
+    opacity: 92%;
+}
+
+.results-section h2 {
+    margin-bottom: 10px;
+}
+
+.results-section h3 {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,35 @@
+.landing-page {
+  background-image: url('../assets/img1.jpg'); /* URL of the liver image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1450px;
+  height: 420px;
+  color: #fff; /* Set text color to white for better contrast */
+}
+
+.landing-page header {
+  text-align: center;
+}
+
+.landing-page header h1 {
+  margin-bottom: 10px;
+}
+
+.landing-page main {
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.landing-page main section {
+  margin-bottom: 30px;
+}
+
+.landing-page main section h2 {
+  margin-bottom: 10px;
+}

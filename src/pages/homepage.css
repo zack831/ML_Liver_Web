@@ -1,0 +1,10 @@
+.contents{
+	display: flex;
+	flex-direction: row;
+	background-color: grey;
+	height: 500px;
+	background-image: url('../assets/img2.jpg'); /* URL of the liver image */
+  	background-size: cover; /* Cover the entire container */
+  	background-position: center; /* Center the background image */
+  	background-repeat: no-repeat; 
+}

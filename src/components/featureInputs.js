@@ -64,6 +64,9 @@ const Predection = ({ handleNext }) => {
                 <label for = "MALAISE">Malaise</label><input type="text" name="MALAISE" value={inputs.MALAISE} onChange={handleChange} />
                 <button onClick={handleSubmit}>Submit</button>
             </div>
+            <div className = "results">
+                
+            </div>
         </div>
     );
 };

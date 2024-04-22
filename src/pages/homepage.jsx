@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
 import Predection from "../components/featureInputs.js"
 import ResultsOutput from "../components/resultsOutput.jsx"
+import "./homepage.css"
 
 function Homepage() {
-	const [showPredictionForm, setShowPredictionForm] = useState(true);
 	const [predictionResult, setPredictionResult] = useState(null);
 
     const handleNext = (data) => {
-        setShowPredictionForm(false);
         setPredictionResult(data);
     };
 
-    const handleBack = () => {
-        setShowPredictionForm(true);
-    };
+    // const handleBack = () => {
+    //     setShowPredictionForm(true);
+    // };
 
     return (
-        <div>
-            {showPredictionForm ? (
+         <div className="contents">
+            <div className="prediction-section">
                 <Predection handleNext={handleNext} />
-            ) : (
-                <ResultsOutput predictionResult={predictionResult} handleBack={handleBack} />
+            </div>
+            {predictionResult && (
+                <div className="results-section">
+                    <ResultsOutput predictionResult={predictionResult}/>
+                </div>
             )}
         </div>
     );
 
 }
 
-export default Homepage;
+export default Homepage; 
