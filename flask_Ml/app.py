@@ -9,6 +9,7 @@ CORS(app)
 
 port = int(os.environ.get('PORT', 5000))  # Use port 5000 as default if PORT is not set
 
+
 mortality_model = pickle.load(open("model.pkl", "rb"))
 classification_model = pickle.load(open("model_classify.pkl", "rb"))
 
@@ -70,5 +71,9 @@ def predict():
     		response = jsonify(message="Low Chances of mortality",message2 = "No Disease")
     		return response;
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug= True, port=port)
+
+# if __name__ == '__main__':
+#     app.run(debug=True)
