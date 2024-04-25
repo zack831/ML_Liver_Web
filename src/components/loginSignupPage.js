@@ -17,7 +17,7 @@ const LoginSignupPage = () => {
         try {
             if (isLogin) {
                 // Login
-                const response = await axios.post('http://localhost:7000/login', { email, password });
+                const response = await axios.post('https://ml-liver-web.onrender.com/login', { email, password });
                 const token = response.data.token;
                 // You can store the token in localStorage or sessionStorage
                 console.log('Logged in successfully. Token:', token);
@@ -25,7 +25,7 @@ const LoginSignupPage = () => {
                 navigate('/homepage');
             } else {
                 // Sign Up
-                await axios.post('http://localhost:7000/register', { email, password });
+                await axios.post('https://ml-liver-web.onrender.com/register', { email, password });
                 window.alert('Signed up in successfully!');
                 console.log('Signed up successfully.');
             }
