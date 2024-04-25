@@ -33,7 +33,7 @@ const Predection = ({ handleNext }) => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.post('https://flask-c0jq.onrender.com//predict', inputs);
+            const response = await axios.post('http://127.0.0.1:5000/predict', inputs);
             handleNext(response.data);
             console.log(response.data); // Handle response from Flask server
         } catch (error) {
