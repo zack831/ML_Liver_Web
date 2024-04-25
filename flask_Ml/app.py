@@ -23,7 +23,7 @@ def home():
 @app.route('/predict', methods=['POST','GET'])
 def predict():
     data = request.json
-o
+    
     age = data.get('AGE')
     gen = data.get('GENDER')
     alb = data.get('ALBUMIN')
