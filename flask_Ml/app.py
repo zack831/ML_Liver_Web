@@ -2,9 +2,15 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
 import pickle
+import os
 
 app = Flask(__name__)
 CORS(app)
+
+port = int(os.environ.get('PORT', 5000))  # Use port 5000 as default if PORT is not set
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=port)
 
 mortality_model = pickle.load(open("model.pkl", "rb"))
 classification_model = pickle.load(open("model_classify.pkl", "rb"))
@@ -17,7 +23,7 @@ def home():
 @app.route('/predict', methods=['POST','GET'])
 def predict():
     data = request.json
-
+o
     age = data.get('AGE')
     gen = data.get('GENDER')
     alb = data.get('ALBUMIN')
