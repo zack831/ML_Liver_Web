@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Predection from "../components/featureInputs.js"
-import ResultsOutput from "../components/resultsOutput.jsx"
-import "./homepage.css"
+import ResultsOutput from "../components/resultsOutput.jsx";
+import Guide from "../components/guide.jsx";
+import "./homepage.css";
 
 function Homepage() {
 	const [predictionResult, setPredictionResult] = useState(null);
@@ -18,6 +19,9 @@ function Homepage() {
          <div className="contents">
             <div className="prediction-section">
                 <Predection handleNext={handleNext} />
+            </div>
+            <div className="guide-section">
+                <Guide/>
             </div>
             {predictionResult && (
                 <div className="results-section">
